@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Scissors from "../prc/images.png";
-import Paper from "../prc/images (1).png";
-import Rock from "../prc/download (1).png";
+import Scissors from "../prc/Scissor.png";
+import Paper from "../prc/Paper.png";
+import Rock from "../prc/Rock.png";
 
 const Images = [
   { id: "rock_01", image: Paper, msg: "You Choose Paper", com:"Computer choose Paper"},
   { id: "Rock_02", image: Rock, msg: "You Choose Rock", com:"Computer choose Rock" },
-  { id: "scissor_03", image: Scissors, msg: "You Choose Scissors", com:"Computer choose Scissor" },
+  { id: "scissor_03", image: Scissors, msg: "You Choose Scissors", com:"Computer choose Scissor....." },
 ];
 
 
