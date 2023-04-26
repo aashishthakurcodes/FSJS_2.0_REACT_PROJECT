@@ -7,7 +7,6 @@ const Images = [
   { id: "rock_01", image: Paper, msg: "Paper", com:" Paper"},
   { id: "scissor_03", image: Scissors, msg: "Scissors", com:"Scissor" },
   { id: "Rock_02", image: Rock, msg: "Rock", com: "Rock" },
- 
 ];
 
 
@@ -15,6 +14,7 @@ const Images = [
 const Img = () => {
     const [value, updated] = useState();
     const [image, setImage] = useState(null);
+    
     const [randomImage, setRandomImage] = useState(null);
     const [randommsg,updatedmsg]=useState();
   
