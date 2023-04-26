@@ -4,9 +4,10 @@ import Paper from "../prc/Paper.png";
 import Rock from "../prc/Rock.png";
 
 const Images = [
-  { id: "rock_01", image: Paper, msg: "You Choose Paper", com:"Computer choose Paper"},
-  { id: "Rock_02", image: Rock, msg: "You Choose Rock", com:"Computer choose Rock" },
-  { id: "scissor_03", image: Scissors, msg: "You Choose Scissors", com:"Computer choose Scissor....." },
+  { id: "rock_01", image: Paper, msg: "Paper", com:" Paper"},
+  { id: "scissor_03", image: Scissors, msg: "Scissors", com:"Scissor" },
+  { id: "Rock_02", image: Rock, msg: "Rock", com: "Rock" },
+ 
 ];
 
 
@@ -44,7 +45,9 @@ const Img = () => {
   
     return (
       <div>
-        <div>
+        <div className="Container">
+          <h1>Choose..</h1>
+          <div className="imagecontainer">
         {Images.map((icons) => (
           <img
             key={icons.id}
@@ -52,15 +55,45 @@ const Img = () => {
             alt={icons.id}
             onClick={(e) => click(e, `${icons.msg}`,icons.image,icons.com)}
           />
+         
         ))}
-  
+        
+        </div>
+
+        <div className="data">
+          
+          <h2>Paper</h2>
+          <h2>Scissor</h2>
+          <h2>Rock</h2>
+        </div>
+  </div>
+
+        <div className="msg">
+        <div className="componenet"><h3>User</h3>
+          <h3>Computer</h3></div>
+
+
+          
+          <div className="user">
         <h1>{value}</h1>
-        {randommsg && <h3>{randommsg}</h3>}
+        <h3>Vs</h3>
+        <h2>{randommsg && <h3>{randommsg}</h3>}</h2>
+        </div>
+        </div>
+
+
+
+        <div className="result">
+          <div className="result_img">
         {image && <img src={image} alt="selected" />}
         {randomImage && <img src={randomImage} alt="random" />}
-        {result && <h2>{result}</h2>}
-       
         </div>
+        <div>
+        <h2> {result && <h2>{result}</h2>}</h2></div>
+        </div>
+       
+       
+        
       </div>
     );
   };
