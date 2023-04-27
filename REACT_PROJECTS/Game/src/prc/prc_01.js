@@ -4,9 +4,10 @@ import Paper from "../prc/Paper.png";
 import Rock from "../prc/Rock.png";
 
 const Images = [
-  { id: "rock_01", image: Paper, msg: "Paper", com: " Paper" },
-  { id: "scissor_03", image: Scissors, msg: "Scissors", com: "Scissor" },
-  { id: "Rock_02", image: Rock, msg: "Rock", com: "Rock" },
+  { id: "rock", image: Rock, msg: "Rock", com: "Rock" },
+  { id: "paper", image: Paper, msg: "Paper", com: " Paper" },
+  { id: "scissor", image: Scissors, msg: "Scissors", com: "Scissor" },
+  
 ];
 
 
@@ -18,6 +19,8 @@ const Img = () => {
   const [randomImage, setRandomImage] = useState(null);
   const [randommsg, updatedmsg] = useState();
 
+  const[play, setplay]=useState(false)
+
   const click = (e, msg, img, com) => {
     updated(msg);
     setImage(img);
@@ -26,34 +29,40 @@ const Img = () => {
     const randomIndex = Math.floor(Math.random() * Images.length);
     setRandomImage(Images[randomIndex].image);
     updatedmsg(Images[randomIndex].com)
+
+    setplay(true)
   }
 
   let result = null;
   if (image && randomImage) {
     if (image === randomImage) {
-      result = "It's a tie!";
+      result = "It's a tie...😳!";
     } else if (
       (image === Paper && randomImage === Rock) ||
       (image === Rock && randomImage === Scissors) ||
       (image === Scissors && randomImage === Paper)
     ) {
-      result = "You Win!";
+      result = "Congrats You Win...😊🥇";
     } else {
-      result = "You Lose!";
+      result = "You Lose...🥺!";
     }
+  }
+
+  const refresh =()=>{
+    window.location.reload();
   }
 
   return (
     <div className="main">
       <div className="Container">
-        <h1>Choose..</h1>
+        <h1>Click to choose..</h1>
         <div className="imagecontainer">
           {Images.map((icons) => (
             <img
               key={icons.id}
               src={icons.image}
               alt={icons.id}
-              onClick={(e) => click(e, `${icons.msg}`, icons.image, icons.com)}
+              onClick={ play ? null : (e) => click(e, `${icons.msg}`, icons.image, icons.com)}
             />
 
           ))}
@@ -61,10 +70,10 @@ const Img = () => {
         </div>
 
         <div className="data">
-
+        <h2>Rock</h2>
           <h2>Paper</h2>
           <h2>Scissor</h2>
-          <h2>Rock</h2>
+          
         </div>
       </div>
 
@@ -94,6 +103,7 @@ const Img = () => {
         <div className="result_msg"> 
         <span>{result && <h3>{result}</h3>}</span>
         </div>
+        <button onClick={refresh}>Try Again</button>
 
       </div>
       
