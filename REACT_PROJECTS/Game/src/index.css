@@ -138,8 +138,9 @@ button{
   
 @media only screen and (max-width: 450px){
 
-
-  
+  .main{
+   justify-content: first baseline;
+  }
   .Container{
     width: 90%;
   }
