@@ -139,13 +139,7 @@ button{
 @media only screen and (max-width: 450px){
 
 
-  body{
-    border: 6px solid red;
-    height: 70vh;
-  }
-  .main{
-    height: 70vh;
-  }
+  
   .Container{
     width: 90%;
   }
