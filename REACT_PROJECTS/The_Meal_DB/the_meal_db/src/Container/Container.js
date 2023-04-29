@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
+import Shimmer from "../Shimmer/Shimmer.js";
 
 
-const Container=({strMeal,strArea})=>{
-    const[meal,setmeal]=useState([])
+const Container=()=>{
+    const[meal,setmeal]=useState([]);
+    const[shimer,setsim]=useState(true)
 
     useEffect(()=>{
       fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
       .then((res)=>res.json())
-      .then((data)=>{setmeal(data.meals)})
+      .then((data)=>{setmeal(data.meals)
+        setsim(false)})
+      ;
     },[])
 
     
-    return(
+    return shimer ? (
+        <Shimmer/>
+      ) :(
         <div>
             <div>
             <div className="data_container">

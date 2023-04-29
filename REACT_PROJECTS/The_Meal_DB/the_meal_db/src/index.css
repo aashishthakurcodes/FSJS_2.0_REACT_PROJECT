@@ -32,3 +32,20 @@ ul{
   padding: 10px;
   margin: 10px 0px;
 }
+.shimamn{
+  display: flex;
+}
+.shimmer_container{
+  border: 2px solid blue;
+  background: #000;
+  height: 250px;
+  width: 300px;
+  display: flex;
+  justify-content:space-around;
+  
+  flex-wrap: wrap;
+}
+.shimmer_data{
+  background: gray;
+  border: 9px solid rgb(0, 34, 255);
+}
