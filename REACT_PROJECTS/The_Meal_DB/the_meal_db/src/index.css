@@ -15,3 +15,20 @@ ul{
   gap: 40px;
   cursor: pointer;
 }
+.data_container{
+  border: 2px solid blue;
+  display: flex;
+  justify-content:space-around;
+  /* gap: 15px; */
+  flex-wrap: wrap;
+}
+.data_container img{
+  width: 350px;
+  height: 250px;
+}
+
+.box_meal{
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px 0px;
+}
