@@ -16,9 +16,40 @@ const Img = () => {
   const [randomImage, setRandomImage] = useState(null);
   const [randommsg, updatedmsg] = useState();
 
-  const [play, setplay] = useState(false);
+  // const [play, setplay] = useState(false);
+  //Score Card
+  const[win,setwin]=useState(0);
+  const[lose,setlose]=useState(0);
+  const[tie,settie]=useState(0);
+  const[output,setoutput]=useState("");
   
 
+
+
+  const clickresult=(image,randomImage,setoutput)=>{
+    
+    if (image && randomImage) {
+      if (image === randomImage) {
+       setoutput("It's a tie...😳!");
+        settie(tie+1);
+       
+      } else if (
+        (image === Paper && randomImage === Rock) ||
+        (image === Rock && randomImage === Scissors) ||
+        (image === Scissors && randomImage === Paper)
+      ) {
+        setoutput("Congrats You Win...😊🥇")
+        setwin(win+1)
+  
+        
+      } else {
+        setoutput("You Lose...🥺!");
+        setlose(lose+1)
+        
+      }
+    }
+  }
+  
   const click = (e, msg, img, com) => {
     updated(msg);
     setImage(img);
@@ -27,39 +58,31 @@ const Img = () => {
     const randomIndex = Math.floor(Math.random() * Images.length);
     setRandomImage(Images[randomIndex].image);
     updatedmsg(Images[randomIndex].com);
-    setplay(true);
+    // setplay(true);
+
+    const result = clickresult(img, Images[randomIndex].image,setoutput);
+    setResult(result);
   };
 
-  let result = null;
-  if (image && randomImage) {
-    if (image === randomImage) {
-      result = "It's a tie...😳!";
-      // settie((tie+1))
-      // setresult(results+1)
-    } else if (
-      (image === Paper && randomImage === Rock) ||
-      (image === Rock && randomImage === Scissors) ||
-      (image === Scissors && randomImage === Paper)
-    ) {
-      result = "Congrats You Win...😊🥇";
-      // setresult(results+1)
-    } else {
-      result = "You Lose...🥺!";
-      // setresult(results+1)
-    }
-  }
+  const[result,setResult]=useState(null)
+  
 
-  const refresh = () => {
-    window.location.reload();
-  };
+  // const refresh = () => {
+  //   window.location.reload();
+  // };
 
   return (
     <div className="main">
+      
       <div className="Container">
         <h1>Click to choose..</h1>
-        {/* <span>{results}</span> */}
-        {/* <span>{tie}</span>
-        <span>{lose}</span> */}
+        <div className="scoreccard">
+      <h3>Win:-{win}</h3>
+        <h3>Lose:-{lose}</h3>
+        <h3>Tie:-{tie}</h3>
+
+      </div>
+       
         <div className="imagecontainer">
           {Images.map((icons) => (
             <img
@@ -67,9 +90,7 @@ const Img = () => {
               src={icons.image}
               alt={icons.id}
               onClick={
-                play
-                  ? null
-                  : (e) => click(e, `${icons.msg}`, icons.image, icons.com)
+               (e) => click(e, `${icons.msg}`, icons.image, icons.com)
               }
             />
           ))}
@@ -86,6 +107,7 @@ const Img = () => {
         <div className="componenet">
           <h3>User</h3>
           <h3>Computer</h3>
+          
         </div>
 
         <div className="user">
@@ -101,9 +123,11 @@ const Img = () => {
           {randomImage && <img src={randomImage} alt="random" />}
         </div>
         <div className="result_msg">
-          <span>{result && <h3>{result}</h3>}</span>
+          <span>{output}</span>
+          
         </div>
-        <button onClick={refresh}>Try Again</button>
+        
+        <button >Try Again</button>
       </div>
     </div>
   );
