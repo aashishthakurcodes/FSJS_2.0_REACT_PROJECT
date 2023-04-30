@@ -36,16 +36,25 @@ ul{
   display: flex;
 }
 .shimmer_container{
-  border: 2px solid blue;
-  background: #000;
+  border: 2px solid rgb(252, 252, 255);
+  background: #a99696;
   height: 250px;
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content:space-around;
+  padding: 10px;
+  margin: 10px 0px;
   
   flex-wrap: wrap;
 }
-.shimmer_data{
-  background: gray;
-  border: 9px solid rgb(0, 34, 255);
+.shimmer_header {
+  padding-top: 180px;
+  height: 20px;
+  width: 100%;
+  background: #d7cfcf;
+}
+.shimer_div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

@@ -2,12 +2,15 @@ import React from "react";
 
 
 const Shimmer = () => {
-   
+//    const shimArray=Array.from({length:10}, (_, index) => index)
 
         return (
             <div>
+               
                 <div className="shimamn">
+           
                 <div className="shimmer_container">
+                    <h1 className="shimmer_header"></h1>
                   
                 </div>
             </div>
@@ -16,6 +19,35 @@ const Shimmer = () => {
     }
 
 
-export default Shimmer
+    const Show_shimmer=()=>{
+        return(
+            <div className="shimer_div">
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+                <Shimmer/>
+            </div>
+        )
+    }
+
+export default Show_shimmer
 
 

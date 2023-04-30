@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Shimmer from "../Shimmer/Shimmer.js";
+import Show_shimmer from "../Shimmer/Shimmer.js";
 
 
 const Container=()=>{
@@ -16,7 +16,7 @@ const Container=()=>{
 
     
     return shimer ? (
-        <Shimmer/>
+        <Show_shimmer/>
       ) :(
         <div>
             <div>
