@@ -67,19 +67,21 @@ const Img = () => {
   const[result,setResult]=useState(null)
   
 
-  // const refresh = () => {
-  //   window.location.reload();
-  // };
+  const refreshpage=()=>{
+    window.location.reload();
+  }
 
   return (
     <div className="main">
       
       <div className="Container">
-        <h1>Click to choose..</h1>
+        <h2>Click to choose..</h2>
+        <span>Score_Card</span>
         <div className="scoreccard">
-      <h3>Win:-{win}</h3>
-        <h3>Lose:-{lose}</h3>
-        <h3>Tie:-{tie}</h3>
+          
+      <h3>Win :- {win}</h3>
+        <h3>Lose :- {lose}</h3>
+        <h3>Tie :- {tie}</h3>
 
       </div>
        
@@ -127,7 +129,7 @@ const Img = () => {
           
         </div>
         
-        <button >Try Again</button>
+        <button onClick={refreshpage}>New Game</button>
       </div>
     </div>
   );
