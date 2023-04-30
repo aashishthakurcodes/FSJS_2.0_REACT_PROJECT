@@ -1,3 +1,5 @@
+
+//Its only used for practice...igonre it
 import React, { useState } from "react"
 
 const Data=()=>{

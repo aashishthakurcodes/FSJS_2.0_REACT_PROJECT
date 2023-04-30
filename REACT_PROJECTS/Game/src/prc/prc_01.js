@@ -6,94 +6,86 @@ import Rock from "../prc/Rock.png";
 const Images = [
   { id: "rock", image: Rock, msg: "Rock", com: "Rock" },
   { id: "paper", image: Paper, msg: "Paper", com: " Paper" },
-  { id: "scissor", image: Scissors, msg: "Scissors", com: "Scissor" },
+  { id: "scissor", image: Scissors, msg: "Scissor", com: "Scissor" },
 ];
 
 const Img = () => {
   const [value, updated] = useState();
+  //It will give users msg
   const [image, setImage] = useState(null);
-
+  //it return user selecting image
   const [randomImage, setRandomImage] = useState(null);
+  //image by random
   const [randommsg, updatedmsg] = useState();
+  //random msg
 
-  // const [play, setplay] = useState(false);
   //Score Card
-  const[win,setwin]=useState(0);
-  const[lose,setlose]=useState(0);
-  const[tie,settie]=useState(0);
-  const[output,setoutput]=useState("");
-  
+  const [win, setwin] = useState(0);
+  const [lose, setlose] = useState(0);
+  const [tie, settie] = useState(0);
+  const [output, setoutput] = useState("");
+  //it will show the result msg
 
-
-
-  const clickresult=(image,randomImage,setoutput)=>{
-    
+  const clickresult = (image, randomImage, setoutput) => {
+    //Logic
     if (image && randomImage) {
       if (image === randomImage) {
-       setoutput("It's a tie...😳!");
-        settie(tie+1);
-       
+        setoutput("It's a tie...😳!");
+        settie(tie + 1);
       } else if (
         (image === Paper && randomImage === Rock) ||
         (image === Rock && randomImage === Scissors) ||
         (image === Scissors && randomImage === Paper)
       ) {
-        setoutput("Congrats You Win...😊🥇")
-        setwin(win+1)
-  
-        
+        setoutput("Congrats You Win...😊🥇");
+        setwin(win + 1);
       } else {
         setoutput("You Lose...🥺!");
-        setlose(lose+1)
-        
+        setlose(lose + 1);
       }
     }
-  }
-  
+  };
+
   const click = (e, msg, img, com) => {
+    //update the user msg and image
     updated(msg);
     setImage(img);
 
     //Random Image by computer
     const randomIndex = Math.floor(Math.random() * Images.length);
+    //Update the computer msg and image(random)
     setRandomImage(Images[randomIndex].image);
     updatedmsg(Images[randomIndex].com);
-    // setplay(true);
 
-    const result = clickresult(img, Images[randomIndex].image,setoutput);
+    const result = clickresult(img, Images[randomIndex].image, setoutput);
     setResult(result);
   };
 
-  const[result,setResult]=useState(null)
-  
+  const [result, setResult] = useState(null);
 
-  const refreshpage=()=>{
+  //....for refresh the page
+  const refreshpage = () => {
     window.location.reload();
-  }
+  };
 
   return (
     <div className="main">
-      
       <div className="Container">
         <h2>Click to choose..</h2>
         <span>Score_Card</span>
         <div className="scoreccard">
-          
-      <h3>Win :- {win}</h3>
-        <h3>Lose :- {lose}</h3>
-        <h3>Tie :- {tie}</h3>
+          <h3>Win :- {win}</h3>
+          <h3>Lose :- {lose}</h3>
+          <h3>Tie :- {tie}</h3>
+        </div>
 
-      </div>
-       
         <div className="imagecontainer">
           {Images.map((icons) => (
             <img
               key={icons.id}
               src={icons.image}
               alt={icons.id}
-              onClick={
-               (e) => click(e, `${icons.msg}`, icons.image, icons.com)
-              }
+              onClick={(e) => click(e, `${icons.msg}`, icons.image, icons.com)}
             />
           ))}
         </div>
@@ -109,7 +101,6 @@ const Img = () => {
         <div className="componenet">
           <h3>User</h3>
           <h3>Computer</h3>
-          
         </div>
 
         <div className="user">
@@ -126,9 +117,8 @@ const Img = () => {
         </div>
         <div className="result_msg">
           <span>{output}</span>
-          
         </div>
-        
+
         <button onClick={refreshpage}>New Game</button>
       </div>
     </div>
