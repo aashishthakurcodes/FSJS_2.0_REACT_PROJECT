@@ -58,3 +58,9 @@ ul{
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.inputsrch{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

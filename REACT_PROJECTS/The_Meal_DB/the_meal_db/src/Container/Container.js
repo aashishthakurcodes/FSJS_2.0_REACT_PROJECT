@@ -35,7 +35,7 @@ const Container=()=>{
         <Show_Shimmer/>
       ) :(
         <div>
-          <div>
+          <div className="inputsrch">
           <input
         type="text"
         placeholder="Enter some data"
