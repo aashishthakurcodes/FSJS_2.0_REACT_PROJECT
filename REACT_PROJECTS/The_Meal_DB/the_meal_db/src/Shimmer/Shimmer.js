@@ -19,7 +19,7 @@ const Shimmer = () => {
     }
 
 
-    const Show_shimmer=()=>{
+    const Show_Shimmer=()=>{
         return(
             <div className="shimer_div">
                 <Shimmer/>
@@ -48,6 +48,6 @@ const Shimmer = () => {
         )
     }
 
-export default Show_shimmer
+export default Show_Shimmer
 
 
