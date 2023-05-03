@@ -30,7 +30,10 @@ const Container=()=>{
 
     // Search btn
 
-    
+    if(!setmeal){
+   console.log("Sorry no result found");
+    }
+
     return shimer ? (
         <Show_Shimmer/>
       ) :(
