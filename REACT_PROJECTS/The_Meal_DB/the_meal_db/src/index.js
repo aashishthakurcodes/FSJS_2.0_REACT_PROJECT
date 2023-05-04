@@ -7,6 +7,8 @@ import About from "./About_pg/About";
 import Contact from "./Contact_pg/Contact"
 import Info from './moreInfo/Info';
 import Header from './Header.js/Header';
+import Container from './Container/Container';
+
 
 
 
@@ -16,9 +18,11 @@ const appRouter=createBrowserRouter([
   {
     path:'/',
     element:<App/>,
-   
-  },
-  
+    children:[
+      {
+        path:'/',
+        element:<Container/>
+      },
       {
         path:'/about',
         element:<About/>
@@ -29,9 +33,14 @@ const appRouter=createBrowserRouter([
         element:<Contact/>
       },
       {
-        path:'/info/:id',
+        path:'/info/:mealid',
         element:<Info/>
       }
+    ]
+   
+  },
+  
+     
  
   
 ])
