@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
 const Container = () => {
   const [meal, setmeal] = useState([]);
-  // const[shimer,setsim]=useState(true)
   const [input, setInput] = useState("");
 
   const handleclick = () => {
@@ -34,10 +33,12 @@ const Container = () => {
   // Search btn
 
 
-  if (meal.length === 0) {
+  if (!meal || meal.length === 0) {
     return <Show_Shimmer />
   }
-
+  else if (!input && meal.length === 0)  {
+    return <p>No results found.</p>
+  }
   return (
     <div>
       <div className="inputsrch">
@@ -53,12 +54,12 @@ const Container = () => {
       <div>
         <div className="data_container">
           
-            {meal.map((meal) => (
+            {meal.map((meals) => (
               <div className="box_meal" >
-                 <Link to={"/info/" + meal.idMeal}>
-                <img src={meal.strMealThumb} alt={meal.strMeal} />
-                <h2>{meal.strMeal}</h2>
-                <h3>{meal.strArea}</h3>
+                 <Link to={"/info/" + meals.idMeal}>
+                <img src={meals.strMealThumb} alt={meals.strMeal} />
+                <h2>{meals.strMeal}</h2>
+                <h3>{meals.strArea}</h3>
                 </Link>
               </div>
 
