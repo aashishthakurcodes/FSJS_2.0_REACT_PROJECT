@@ -65,12 +65,44 @@ ul{
   align-items: center;
 }
 
-.info_img{
-  width: 400px;
-  height: 450px;
-}
-.info_data{
-  display:  flex;
+/* info css */
+
+.info__main{
+  display: flex;
+  border: 2px solid red;
   justify-content: center;
-  /* align-items: center; */
+  gap: 30px;
 }
+.img_info{
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+}
+.info_list{
+  display: flex;
+  /* flex-direction: column; */
+  list-style: none;
+  border: 3px solid blue;
+  gap: 50px;
+  padding: 15px;
+
+}
+.container{
+  border: 5px solid red;
+  
+}
+.instruction{
+  margin-top: 20px;
+  border: 2px solid red;
+  padding: 5px;
+}
+.instruction p{
+  font-size: 20px;
+  word-spacing: 3px;
+}
+.tutorial{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
