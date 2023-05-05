@@ -7,11 +7,14 @@ const Container = () => {
   const [meal, setmeal] = useState([]);
   const [input, setInput] = useState("");
 
+ 
+
   const handleclick = () => {
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + input)
       .then((res) => res.json())
       .then((data) => {
-        setmeal(data.meals);
+        setmeal(data.meals)
+       
       })
       .catch((error) => {
         // console.error(error);
@@ -19,6 +22,8 @@ const Container = () => {
       });
 
   }
+
+ 
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
@@ -30,16 +35,16 @@ const Container = () => {
   }, []);
 
 
+
+
   // Search btn
 
 
-  if (!meal || meal.length === 0) {
-    return <Show_Shimmer />
-  }
-  else if (!input && meal.length === 0)  {
-    return <p>No results found.</p>
-  }
-  return (
+
+ 
+  
+  
+  return  meal.length===0 ?( <Show_Shimmer/> ):(
     <div>
       <div className="inputsrch">
         <input
@@ -51,6 +56,7 @@ const Container = () => {
         <button onClick={handleclick}>search</button>
       </div>
 
+  
       <div>
         <div className="data_container">
           

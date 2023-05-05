@@ -19,9 +19,14 @@ const Info=()=>{
     return(
         <div>
            <h1>Id is{mealid}</h1>
-           <h1>Id is{info.strMeal}</h1>
-           {/* <h1>Id is{info.strInstructions}</h1> */}
-           <img src={info.strMealThumb} alt="img" />
+           <h1>How to make { info.strMeal}</h1>
+           <div className="info_data">
+           <img className="info_img" src={info.strMealThumb} alt="img" />
+           <p style={{fontSize:"20px", wordSpacing:"5px"}}>{info.strInstructions}</p>
+           </div>
+           <div>
+        
+           </div>
         </div> 
     )
 }

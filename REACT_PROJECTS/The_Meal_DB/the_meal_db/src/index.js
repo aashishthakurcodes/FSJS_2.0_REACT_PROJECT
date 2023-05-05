@@ -10,10 +10,6 @@ import Header from './Header.js/Header';
 import Container from './Container/Container';
 
 
-
-
-
-
 const appRouter=createBrowserRouter([
   {
     path:'/',

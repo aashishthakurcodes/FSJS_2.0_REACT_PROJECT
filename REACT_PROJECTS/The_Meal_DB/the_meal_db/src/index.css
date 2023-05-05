@@ -64,3 +64,13 @@ ul{
   justify-content: center;
   align-items: center;
 }
+
+.info_img{
+  width: 400px;
+  height: 450px;
+}
+.info_data{
+  display:  flex;
+  justify-content: center;
+  /* align-items: center; */
+}
