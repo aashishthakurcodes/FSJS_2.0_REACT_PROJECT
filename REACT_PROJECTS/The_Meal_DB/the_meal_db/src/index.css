@@ -15,23 +15,49 @@ ul{
   gap: 40px;
   cursor: pointer;
 }
+
+
+/* Home page */
 .data_container{
   border: 2px solid blue;
   display: flex;
   justify-content:space-around;
   /* gap: 15px; */
   flex-wrap: wrap;
+  background: #020315;
 }
 .data_container img{
   width: 350px;
   height: 250px;
+  border-radius: 10px;
 }
 
 .box_meal{
-  border: 1px solid red;
+  border: 1px solid rgb(254, 251, 253);
+  /* padding: 10px;
+  margin: 10px 0px; */
+  height: 100%;
+  width: 350px;
   padding: 10px;
   margin: 10px 0px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  background: #000;
+  
 }
+.box_meal:hover{
+  
+  transform: scale(0.93);
+  transition-delay: 0.2s;
+}
+.box_meal a{
+  text-decoration: none;
+  color: rgb(246, 242, 242);
+}
+
+
+
+
 .shimamn{
   display: flex;
 }
