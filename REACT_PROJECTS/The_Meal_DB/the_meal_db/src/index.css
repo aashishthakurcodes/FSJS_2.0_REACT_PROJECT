@@ -24,7 +24,7 @@ ul{
   justify-content:space-around;
   /* gap: 15px; */
   flex-wrap: wrap;
-  background: #020315;
+  background: #fafafc;
 }
 .data_container img{
   width: 350px;
@@ -42,7 +42,7 @@ ul{
   margin: 10px 0px;
   transition: transform 0.3s ease-in-out;
   border-radius: 10px;
-  background: #000;
+  /* background: #000; */
   
 }
 .box_meal:hover{
@@ -52,7 +52,7 @@ ul{
 }
 .box_meal a{
   text-decoration: none;
-  color: rgb(246, 242, 242);
+  color: rgb(14, 14, 14);
 }
 
 
@@ -132,3 +132,26 @@ ul{
   padding: 20px;
 }
 
+
+/* Info shimmer */
+.info_shimmer{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
+.shimer_info{
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  background: #000;
+}
+.shimer_list{
+ display: flex;
+  gap: 50px;
+  background: #d70303;
+
+}
+.info_para{
+  background: #000;
+}

@@ -1,4 +1,4 @@
-import Show_Shimmer from "../Shimmer/Shimmer";
+import Info_shimmer from "../Shimmer/InfoShimmer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Info = () => {
   }, [mealid]);
 
   if (info.length === 0) {
-    return <Show_Shimmer />;
+    return <Info_shimmer/>;
   }
   return (
     <div>
