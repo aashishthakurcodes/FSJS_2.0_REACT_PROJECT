@@ -138,20 +138,41 @@ ul{
   display: flex;
   justify-content: center;
   gap: 30px;
+  /* border:2px solid red */
 
 }
 .shimer_info{
   width: 500px;
   height: 350px;
   border-radius: 10px;
-  background: #000;
+  background: #9b9797;
+  /* border: 3px solid greenyellow; */
 }
 .shimer_list{
  display: flex;
   gap: 50px;
-  background: #d70303;
-
+  background: #9b9797;
+  /* border: 3px solid purple; */
+  height: 350px;
+  width: 200px;
+  border-radius: 10px;
 }
 .info_para{
-  background: #000;
+  background: #b2acac;
+  margin-top: 20px;
+  height: 200px;
+  border: 15px;
+}
+.video_info{
+  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.video{
+  height:270px;
+  width: 500px;
+  background-color: gray;
+  margin-top: 20px;
+  border-radius: 20px;
 }

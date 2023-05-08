@@ -16,6 +16,9 @@ const Info_shimmer=()=>{
             <div className="info_para">
 
             </div>
+            <div className="video_info">
+                <div className="video"></div>
+            </div>
 
         </div>
     )
