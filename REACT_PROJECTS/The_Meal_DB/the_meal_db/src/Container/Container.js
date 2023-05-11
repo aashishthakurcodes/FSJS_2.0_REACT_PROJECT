@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 
 const Container = () => {
   const [meal, setmeal] = useState([]);
+  const [search, setsearch] = useState([]);
   const [input, setInput] = useState("");
 
  
@@ -14,7 +15,8 @@ const Container = () => {
       .then((res) => res.json())
       .then((data) => {
         setmeal(data.meals)
-       
+        setmeal(data.meals)
+      
       })
       .catch((error) => {
         // console.error(error);
@@ -30,21 +32,25 @@ const Container = () => {
       .then((res) => res.json())
       .then((data) => {
         setmeal(data.meals);
-
+       if(search.length===0){
+       return<p>Oops ,... No result</p>
+       }
       })
   }, []);
 
-
+ 
 
 
   // Search btn
+if(meal.length===0){
+  return  <Show_Shimmer/>;
+}
 
 
 
- 
+
   
-  
-  return  meal.length===0 ?( <Show_Shimmer/> ):(
+  return  (
     <div>
       <div className="inputsrch">
         <input
@@ -53,9 +59,11 @@ const Container = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button onClick={handleclick}>search</button>
+        <button className="srcbtn" onClick={handleclick}>Search</button>
       </div>
+  
 
+      
   
       <div>
         <div className="data_container">
