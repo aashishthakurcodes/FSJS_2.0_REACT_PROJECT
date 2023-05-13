@@ -23,7 +23,7 @@ const Info = () => {
 
           <div className="container">
             <div>
-              <h1>Ingredients</h1>
+              <h1 style={{fontFamily:"Roboto Slab"}}>Ingredients</h1>
             </div>
 
             <div className="info_list">
@@ -69,8 +69,8 @@ const Info = () => {
 
       <section>
         <div className="instruction">
-            <h2>Instruction</h2>
-            <p>{info.strInstructions}</p>
+            <h2 style={{fontFamily:"Roboto Slab"}}>Instruction</h2>
+            <p style={{fontFamily:"Roboto Slab"}}>{info.strInstructions}</p>
         </div>
       </section>
 

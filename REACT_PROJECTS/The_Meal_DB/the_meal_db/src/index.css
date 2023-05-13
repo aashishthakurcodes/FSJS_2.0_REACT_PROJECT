@@ -131,32 +131,47 @@ li:hover{
 
 .info__main{
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   justify-content: center;
   gap: 30px;
+  padding: 20px;
 }
 .img_info{
   width: 500px;
   height: 350px;
+  border-radius: 10px;
+  box-shadow: 1px 0px 5px 3px rgb(230, 227, 230);
   border-radius: 10px;
 }
 .info_list{
   display: flex;
   /* flex-direction: column; */
   list-style: none;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   gap: 50px;
   padding: 15px;
 
 }
 .container{
-  border: 5px solid red;
+  border: 1px solid rgb(4, 4, 4);
+  text-align: center;
+  box-shadow: 1px 0px 5px 3px rgb(230, 227, 230);
+  border-radius: 10px;
   
 }
 .instruction{
   margin-top: 20px;
-  border: 2px solid red;
-  padding: 5px;
+  /* border: 2px solid red; */
+  padding: 2px;
+  box-shadow: 1px 0px 5px 3px rgb(230, 227, 230);
+  border-radius: 10px;
+  /* text-align: center; */
+}
+.instruction h2{
+  /* border: 2px solid blue; */
+  background: #2e2e2e;
+  color: #ffff;
+  text-align: center;
 }
 .instruction p{
   font-size: 20px;
