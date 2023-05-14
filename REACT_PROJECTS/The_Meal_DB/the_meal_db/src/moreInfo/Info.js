@@ -2,7 +2,11 @@ import Info_shimmer from "../Shimmer/InfoShimmer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 const Info = () => {
+  
+  
+
   const { mealid } = useParams();
   const [info, setinfo] = useState([]);
 
@@ -85,6 +89,9 @@ const Info = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+
+
+        
 
             
         </div>

@@ -1,56 +1,51 @@
 import React, { useEffect, useState } from "react";
 import Show_Shimmer from "../Shimmer/Shimmer.js";
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
+import Error from "../About_pg/Error";
 
 const Container = () => {
-  const [meal, setmeal] = useState([]);
-  const [search, setsearch] = useState([]);
+  const [meal, setMeal] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
- 
-
-  const handleclick = () => {
+  const handleClick = () => {
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + input)
       .then((res) => res.json())
       .then((data) => {
-        setmeal(data.meals)
-        setmeal(data.meals)
-      
+        if (data.meals) {
+          setMeal(data.meals);
+          setError(false);
+        } else {
+          setMeal([]);
+          setError(true);
+        }
       })
       .catch((error) => {
         // console.error(error);
-        alert(error)
+        alert(error);
       });
-
-  }
-
- 
+  };
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=")
       .then((res) => res.json())
       .then((data) => {
-        setmeal(data.meals);
-       if(search.length===0){
-       return<p>Oops ,... No result</p>
-       }
+        setMeal(data.meals);
+        setLoading(false);
       })
+      .catch((error) => {
+        setError(true);
+        setLoading(false);
+        // console.error(error);
+      });
   }, []);
 
- 
+  if (loading) {
+    return <Show_Shimmer />;
+  }
 
-
-  // Search btn
-if(meal.length===0){
-  return  <Show_Shimmer/>;
-}
-
-
-
-
-  
-  return  (
+  return (
     <div>
       <div className="inputsrch">
         <input
@@ -59,29 +54,28 @@ if(meal.length===0){
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button className="srcbtn" onClick={handleclick}>Search</button>
+        <button className="srcbtn" onClick={handleClick}>
+          Search
+        </button>
       </div>
-  
 
-      
-  
+      {error && <Error />}
+
       <div>
         <div className="data_container">
-          
-            {meal.map((meals) => (
-              <div className="box_meal" >
-                 <Link to={"/info/" + meals.idMeal}>
+          {meal.map((meals) => (
+            <div className="box_meal" key={meals.idMeal}>
+              <Link to={"/info/" + meals.idMeal}>
                 <img src={meals.strMealThumb} alt={meals.strMeal} />
                 <h2>{meals.strMeal}</h2>
                 <h3>{meals.strArea}</h3>
-                </Link>
-              </div>
-
-            ))}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Container;
