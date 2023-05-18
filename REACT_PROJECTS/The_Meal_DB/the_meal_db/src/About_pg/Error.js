@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Container from '../Container/Container';
+import  noresult from "../Images/no-results.gif"
 
 
 const Error =()=>{
     return(
-        <div>
-     <h1>OOPS...No result found</h1>
+        <div className='error_div'>
+      <img style={{width:"600px",height:"400px"}} src={noresult} alt='noresult'/>
 
      <button>
        <Link to={"/"}>Home</Link>

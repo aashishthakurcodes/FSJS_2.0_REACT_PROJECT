@@ -131,6 +131,7 @@ li:hover{
 
 .info__main{
   display: flex;
+  flex-wrap: wrap;
   /* border: 2px solid red; */
   justify-content: center;
   gap: 30px;
@@ -205,6 +206,7 @@ input{
 /* Info shimmer */
 .info_shimmer{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   /* border:2px solid red */
@@ -244,4 +246,12 @@ input{
   background-color: gray;
   margin-top: 20px;
   border-radius: 20px;
+}
+
+/* //error div */
+.error_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
