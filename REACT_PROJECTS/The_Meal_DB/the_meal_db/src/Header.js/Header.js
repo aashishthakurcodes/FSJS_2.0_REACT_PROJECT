@@ -1,9 +1,20 @@
 import React from 'react';
 import gif from "../Images/595069106677405.5f95b0402b8d3.gif"
 import {Link} from 'react-router-dom'
+import { useState } from 'react';
 
 
 const Header=()=>{
+    const[data,updated]=useState("Login");
+
+    const handle=()=>{
+        if(data==="Login"){
+         updated("Logout")
+        }
+        else if(data==="Logout"){
+            updated("Login")
+        }
+    }
     return(
         <div className='Header'>
          <div className='navbar'>
@@ -16,7 +27,7 @@ const Header=()=>{
               <Link to={"/contact"}>
               <li>Contact</li> </Link>
             </ul>
-            <button className='login'>Login</button>
+            <button className='login' onClick={handle}>{data}</button>
          </div>
         </div>
     )

@@ -254,4 +254,15 @@ input{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgb(216, 206, 206);
+}
+.btn2{
+  margin: 10px;
+  padding: 8px 20px;
+  background: #ff03fb;
+  color: #ffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
 }
