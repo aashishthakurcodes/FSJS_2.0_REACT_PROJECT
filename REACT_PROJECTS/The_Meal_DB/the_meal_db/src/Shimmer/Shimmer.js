@@ -5,7 +5,7 @@ const Shimmer = () => {
 //    const shimArray=Array.from({length:10}, (_, index) => index)
 
         return (
-            <div>
+            <div className="shimmer">
                
                 <div className="shimamn">
            
