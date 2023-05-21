@@ -66,7 +66,7 @@ li:hover{
   gap: 25px;
   flex-wrap: wrap;
   background: #fafafc;
-  margin-top: 60px;
+  margin-top: 20px;
   /* position: relative; */
   overflow: hidden;
 }
@@ -78,12 +78,12 @@ li:hover{
 
 .box_meal{
   border: 1px solid rgb(254, 251, 253);
- 
   height: 100%;
   width: 350px;
   padding: 10px;
   margin: 10px 0px;
   transition: transform 0.3s ease-in-out;
+ 
   border-radius: 10px;
   box-shadow: 1px 0px 5px 3px rgb(230, 227, 230);
  
@@ -91,10 +91,16 @@ li:hover{
   /* background: #000; */
   
 }
+
 .box_meal:hover{
  
-  transform: scale(0.93);
+  /* transform: scale(0.93);
   transition-delay: 0.2s;
+  overflow: initial; */
+  border: 1px solid black;
+  box-shadow: 1px 0px 5px 3px rgb(144, 141, 144);
+ 
+
   
 }
 .box_meal a{
@@ -139,7 +145,9 @@ li:hover{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
+
 
 /* info css */
 
@@ -151,13 +159,15 @@ li:hover{
   gap: 30px;
   padding: 20px;
   margin-top:80px;
+ 
 }
 .img_info{
   width: 500px;
   height: 350px;
   border-radius: 10px;
-  box-shadow: 1px 0px 5px 3px rgb(230, 227, 230);
+  box-shadow: 1px 0px 5px 3px rgb(191, 187, 191);
   border-radius: 10px;
+  border: 0.5px solid black;
 }
 .info_list{
   display: flex;
@@ -206,6 +216,10 @@ input{
   border-radius: 2px;
   border: 1px solid rgb(184, 173, 173);
 }
+input:hover{
+  border: 1px solid black;
+  box-shadow: 1px 0px 5px 3px rgb(194, 192, 194);
+}
 .srcbtn{
  padding: 5.5px;
  background: #ff03fb;
@@ -251,7 +265,6 @@ input{
   border: 15px;
 }
 .video_info{
-  
  display: flex;
  justify-content: center;
  align-items: center;
@@ -291,6 +304,9 @@ input{
   flex-direction: column;
   align-items: center;text-align: center;
   padding: 10px 0px;
+ 
+   
+
 }
 
 
@@ -307,3 +323,19 @@ input{
 .btn :hover{
   color: #fd8d24;
 }
+
+/* About us page */
+.aboutus{
+  bottom: 0;
+  margin-top: 80px;
+  padding: 120px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footersection{ position: relative;
+bottom: 0;
+width: 100%;
+height: 60px;   /* Height of the footer */
+background: rgb(95, 97, 98);}

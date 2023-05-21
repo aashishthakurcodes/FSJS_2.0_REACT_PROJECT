@@ -1,6 +1,7 @@
 import Info_shimmer from "../Shimmer/InfoShimmer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+// import bg from "../Images/download.jpg"
 
 
 const Info = () => {
