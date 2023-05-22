@@ -67,7 +67,7 @@ const Container = () => {
             <div className="box_meal" key={meals.idMeal}>
               <Link to={"/info/" + meals.idMeal}>
                 <img src={meals.strMealThumb} alt={meals.strMeal} />
-                <h2>{meals.strMeal}</h2>
+                <h2 >{meals.strMeal}</h2>
                 <h3>{meals.strArea}</h3>
               </Link>
             </div>

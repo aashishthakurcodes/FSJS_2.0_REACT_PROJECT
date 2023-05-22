@@ -1,0 +1,19 @@
+.light-mode {
+    background-color: white;
+    color: black;
+    /* Add any other styles for light mode */
+  }
+  
+  /* Additional styles for specific elements in light mode */
+  .light-mode .navbar {
+    background-color: white;
+  }
+  
+  .light-mode .data_container {
+    background-color: white;
+  }
+  
+  .light-mode .box_meal {
+    color: black;
+  }
+  
