@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <div className="container_footer" id="footersection">
-        <footer>
+        <footer className="footer">
           <div>
             <button className="btn">
               <i class="fab fa-facebook-f"></i>

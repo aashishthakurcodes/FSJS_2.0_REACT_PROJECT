@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Show_Shimmer from "../Shimmer/Shimmer.js";
 import { Link } from "react-router-dom";
 import Error from "../About_pg/Error";
+import Footer from "../Header.js/Footer.js"
 
 const Container = () => {
   const [meal, setMeal] = useState([]);
@@ -74,6 +75,7 @@ const Container = () => {
           ))}
         </div>
       </div>
+    
     </div>
   );
 };
