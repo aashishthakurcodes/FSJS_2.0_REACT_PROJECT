@@ -349,7 +349,6 @@ input:hover {
   font-size: 35px;
   font-family: "Space Mono";
   color: #111010;
-  
 }
 
 .jkl h3 {
@@ -394,31 +393,32 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 
   text-align: center;
 }
-.othersites{
+
+.othersites {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
-.contactus h1{
+
+.contactus h1 {
   font-size: 35px;
   font-family: "Raleway";
   color: #212020;
-  
 }
 
 .container_contact {
-  
   display: flex;
   justify-content: center;
   align-items: bottom;
-  
+
   height: 85vh;
 }
-
+.instruction p{
+  padding: 0px 10px;
+}
 
 /* Responsive */
 @media only screen and (max-width: 450px) {
@@ -446,4 +446,16 @@ footer {
   input {
     width: 250px;
   }
+  .shimmer_container {
+    height: 250px;
+    width: 310px;
+  }
+  /* info shimmer */
+  .shimer_info {
+  width: 300px;
+  height: 350px;
+}
+.instruction p{
+  padding: 0px 10px;
+}
 }

@@ -1,7 +1,7 @@
 import Info_shimmer from "../Shimmer/InfoShimmer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import bg from "../Images/download.jpg"
+
 
 
 const Info = () => {
@@ -89,84 +89,38 @@ const Info = () => {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
-
-
-        
-
-            
+        ></iframe> 
         </div>
       </section>
+      <div className="fotter">
+
+        <div>
+            <button className="btn">
+              
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button className="btn">
+              <i class="fab fa-youtube"></i>
+            </button>
+            <button className="btn">
+              <i class="fab fa-instagram"></i>
+            </button>
+            <button className="btn">
+              <i class="fab fa-twitter"></i>
+            </button>
+          </div>
+
+          <div>
+            © 2023 Copyright:
+            <a className="text-white" href="https://themealdb.com/">
+              themealdb.com
+            </a>
+          </div>
+
+        </div>
     </div>
   );
 };
 
 export default Info;
-{
-  /* 
 
-<div>
-          <h1 style={{textAlign:"center"}}>How to make {info.strMeal} 😋</h1>
-
-          <div className="info_01">
-            <img className="info_img" src={info.strMealThumb} alt="img" />
-            <div
-              className="data_container"
-              style={{
-                border: "3px solid black",
-                display: "flex",
-                padding: "5px",
-              }}
-            >
-                <div>
-                    <h1>Ingridients</h1>
-                </div>
-
-                <div style={{display:"flex",gap:"20px"}}>
-              <div
-                style={{
-                  listStyle: "none",
-                  border: "2px solid green",
-                  padding: "5px",
-                }}
-              >
-                <li>{info.strIngredient1}</li>
-                <li>{info.strIngredient2}</li>
-                <li>{info.strIngredient3}</li>
-                <li>{info.strIngredient4}</li>
-                <li>{info.strIngredient5}</li>
-                <li>{info.strIngredient6}</li>
-                <li>{info.strIngredient7}</li>
-                <li>{info.strIngredient8}</li>
-                <li>{info.strIngredient9}</li>
-                <li>{info.strIngredient10}</li>
-                <li>{info.strIngredient11}</li>
-                <li>{info.strIngredient12}</li>
-                <li>{info.strIngredient13}</li>
-                <li>{info.strIngredient14}</li>
-                <li>{info.strIngredient15}</li>
-              </div>
-
-              <div style={{ listStyle: "none" , padding: "5px"}}>
-                <li>{info.strMeasure1}</li>
-                <li>{info.strMeasure2}</li>
-                <li>{info.strMeasure3}</li>
-                <li>{info.strMeasure4}</li>
-                <li>{info.strMeasure5}</li>
-                <li>{info.strMeasure6}</li>
-                <li>{info.strMeasure7}</li>
-                <li>{info.strMeasure8}</li>
-                <li>{info.strMeasure9}</li>
-                <li>{info.strMeasure10}</li>
-                <li>{info.strMeasure11}</li>
-                <li>{info.strMeasure12}</li>
-                <li>{info.strMeasure13}</li>
-                <li>{info.strMeasure14}</li>
-                <li>{info.strMeasure15}</li>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */
-}
