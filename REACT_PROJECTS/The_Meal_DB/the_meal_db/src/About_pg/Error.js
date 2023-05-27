@@ -15,7 +15,7 @@ const Error =()=>{
       <img style={{width:"600px",height:"400px"}} src={noresult} alt='noresult'/>
 
      
-        <button className='btn2' onClick={refresh}>Back</button>
+        <button className='btn2' onClick={refresh}>Back to home</button>
       
     
         </div>

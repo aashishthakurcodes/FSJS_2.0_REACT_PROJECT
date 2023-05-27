@@ -15,7 +15,7 @@
   width: 100%;
   background: #ffffff;
   overflow: hidden;
-  border: 2px solid red;
+  /* border: 2px solid rgb(12, 12, 12); */
 }
 
 ul {
@@ -235,12 +235,13 @@ input:hover {
 }
 
 .srcbtn {
-  padding: 6px;
+  padding: 8px;
   background: #ff03fb;
   color: #ffff;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 2px;
 }
 
 /* Info shimmer */
@@ -298,7 +299,7 @@ input:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(216, 206, 206);
+  background: #F4F5F8;
 }
 
 .btn2 {
@@ -320,6 +321,9 @@ input:hover {
   border-radius: 50%;
   cursor: pointer;
   border: none;
+}
+.btn a{
+  color: #faf4f4;
 }
 
 .btn :hover {
@@ -344,14 +348,14 @@ input:hover {
   /* border: 2px solid black; */
 }
 
-.jkl h1 {
+.about_data h1 {
   /* border: 3px solid greenyellow; */
   font-size: 35px;
-  font-family: "Space Mono";
+  font-family: "Raleway";
   color: #111010;
 }
 
-.jkl h3 {
+.about_data h3 {
   word-spacing: 2px;
   font-family: "Aboreto";
   padding: 0px 10px;
