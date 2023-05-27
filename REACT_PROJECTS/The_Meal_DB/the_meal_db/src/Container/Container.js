@@ -51,7 +51,7 @@ const Container = () => {
       <div className="inputsrch">
         <input
           type="text"
-          placeholder="Enter some data"
+          placeholder="Search for your favourite dish..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
